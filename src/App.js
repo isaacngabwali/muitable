@@ -42,7 +42,7 @@ const App = () => {
   const getProductData = async () => {
     try {
       const data = await axios.get(
-        "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline"
+        "https://african.fanitepay.com/africanbase/v1/cause"
       );
       console.log(data.data);
       setProduct(data.data);
@@ -102,12 +102,12 @@ const App = () => {
               })
               .map((item) => {
                 return (
-                  <StyledTableRow key={item.id}>
+                  <StyledTableRow key={item.cause_id}>
                     <StyledTableCell component="th" scope="row">
                       {item.name}
                     </StyledTableCell>
                     <StyledTableCell align="right">
-                      {item.price}
+                      {item.cause_goal}
                     </StyledTableCell>
                   </StyledTableRow>
                 );
